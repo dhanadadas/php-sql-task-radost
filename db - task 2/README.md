@@ -88,10 +88,11 @@ INSERT INTO `orders` (`id`, `customers_id`, `products_id`) VALUES
 ## Нужный запрос
 ```sql
 SELECT customers.name FROM customers
-WHERE (SELECT count(orders.id) FROM orders WHERE orders.customers_id = customers.id) >= 3
-
+WHERE (SELECT count(orders.id) FROM orders WHERE orders.customers_id = customers.id) >= 3;
+```
+```sql
 SELECT customers.name as "Покупатель",COUNT(orders.id) as "Количество заказанных товаров" FROM customers
 LEFT JOIN orders on orders.customers_id = customers.id
 WHERE (SELECT count(orders.id) FROM orders WHERE orders.customers_id = customers.id) >= 3
-GROUP BY customers.name
+GROUP BY customers.name;
 ```
