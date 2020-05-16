@@ -27,3 +27,4 @@
 ```git
 git clone https://github.com/dhanadadas/php-sql-task-radost.git
 ```
+![Где радость](logo-stoiki.png "Где радость")
