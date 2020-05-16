@@ -86,10 +86,12 @@ INSERT INTO `orders` (`id`, `customers_id`, `products_id`) VALUES
 ```
 
 ## Нужный запрос
+Запрос получится очень компактный:
 ```sql
 SELECT customers.name FROM customers
 WHERE (SELECT count(orders.id) FROM orders WHERE orders.customers_id = customers.id) >= 3;
 ```
+тоже самое, только расширенный вариант, с указанием количества купленных товаров для каждого покупателя, который купил более 3 товаров.
 ```sql
 SELECT customers.name as "Покупатель",COUNT(orders.id) as "Количество заказанных товаров" FROM customers
 LEFT JOIN orders on orders.customers_id = customers.id
