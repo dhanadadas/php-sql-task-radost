@@ -2,7 +2,7 @@
 Напишите скрипт, который будет считать количество уникальных посетителей сайта за день и записывать их в базу данных.
 
 ## Задача решена
-Сначало сделал в  [function-style](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/function-style), потом за полчаса переписал под ООП-стиль
+Сначало сделал в [funct[ion-style](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/function-style), потом за полчаса переписал под [ООП-стиль](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/oop-style)
 
 ## Решение sql
 ```sql
