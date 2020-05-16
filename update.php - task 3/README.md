@@ -4,9 +4,11 @@
 ## Варианты через крон
 ### 1. Простой крон
  т.к. крон не запускается чаще 1 минуты можно такой финт провернуть, добавив 3 задания.
+ ```cron
 * * * * * root /home/update.php
-* * * * * root ( sleep 20 ; /home/update.php )
-* * * * * root ( sleep 40 ; /home/update.php )
+* * * * * root ( sleep 20 ; /home/update.php > /dev/null 2>/dev/null )
+* * * * * root ( sleep 40 ; /home/update.php > /dev/null 2>/dev/null )
+```
 В итоге за минуту исполнится 3 раза. 
 
 ### 2. Дополнительный скрипт и крон
