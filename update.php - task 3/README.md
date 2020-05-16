@@ -61,3 +61,6 @@ exec("php /home/update.php > /dev/null 2>/dev/null &");
 ```bash
 nohup watch --interval=20 /home/update.php > /dev/null
 ```
+
+# Вывод
+*если задача по обновлению не тяжелая и не нужно слишком большая пунктуальность до миллисекунд, CRON может быть использован как решение.
