@@ -8,8 +8,8 @@
 1. Напишите скрипт, который будет считать количество уникальных посетителей сайта за день и записывать их в базу данных.
 
 Решение:
-[ООП-стиль](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/oop-style)
-[function-style](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/function-style)
+* [ООП-стиль](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/oop-style)
+* [function-style](https://github.com/dhanadadas/php-sql-task-radost/tree/master/counter%20-%20task%201/function-style)
 
 
 ### Задача 2
