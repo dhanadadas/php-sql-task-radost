@@ -15,3 +15,19 @@ CREATE TABLE `counter_ip` (
 ALTER TABLE `counter_ip`
   ADD UNIQUE KEY `ip` (`ip`);
 ```
+## PHP основа:
+```php
+/**
+ * Реализация
+ */
+deleteOldIp($connect);
+// deleteOldDay ($connect); // если не хранить данные прошлых дней
+
+if ( !checkIp($ip, $connect) ) {
+	addIp ($ip, $connect);
+	if ( !checkDay($connect) ) {
+		addNewDay($connect); // если нужно хранить данные предудущих дней.
+	}
+	updateCount($connect);
+}
+```
