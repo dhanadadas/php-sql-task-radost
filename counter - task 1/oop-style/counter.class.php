@@ -7,22 +7,11 @@ class Counter{
 		$this->sql_database = "counter";
 		$this->connect = mysqli_connect($this->sql_host, $this->sql_user, $this->sql_pass, $this->sql_database);
 		$this->ip = ip2long($_SERVER['SERVER_ADDR']);
-		function connect () {
-			//$connect = mysqli_connect($this->sql_host, $this->sql_user, $this->sql_pass, $this->sql_database);
-			//if (!$connect)  die('Ошибка подключения к серверу баз данных.');
-			//return $connect;
-		}
 	}
 
 	/**
-	 * Методы
-	 */
-
-	/**
-	 * Функция addIp добавляет ip текущего клиента во временную таблицу
+	 * Метод addIp добавляет ip текущего клиента во временную таблицу
 	 *
-	 * @param string $ip текущий ip в числовом формате
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function addIp()
@@ -34,13 +23,12 @@ class Counter{
 	}
 
 	/**
-	 * Функция addNewDay добавляет новую запись
+	 * Метод addNewDay добавляет новую запись
 	 *
 	 * Применяется, если требуется хранить данные прошлых дней.
 	 * Добавляет строчку с текущей датой и 0 начальным значением
 	 * уникальных посетителей
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function addNewDay()
@@ -52,9 +40,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция updateCount обновляет счетчик
+	 * Метод updateCount обновляет счетчик
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function updateCount()
@@ -66,9 +53,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция deleteOldIp удаляет старые ip
+	 * Метод deleteOldIp удаляет старые ip
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function deleteOldIp()
@@ -80,9 +66,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция deleteOldIp удаляет старые ip
+	 * Метод deleteOldIp удаляет старые ip
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function deleteOldDay()
@@ -94,9 +79,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция checkIp проверяет, есть ли текущий ip в базе
+	 * Метод checkIp проверяет, есть ли текущий ip в базе
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function checkIp()
@@ -109,9 +93,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция checkDay проверяет, есть запись текущего дня
+	 * Метод checkDay проверяет, есть запись текущего дня
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function checkDay()
@@ -123,9 +106,8 @@ class Counter{
 	}
 
 	/**
-	 * Функция createDB создает структуру, если указаны данные DB
+	 * Метод createDB создает структуру, если указаны данные DB
 	 *
-	 * @param mysqli $connect текущее соединение
 	 * @return boolean true или false
 	 */
 	function createDB()
